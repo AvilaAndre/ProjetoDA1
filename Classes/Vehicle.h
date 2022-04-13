@@ -6,8 +6,24 @@
 #define PROJETODA1_VEHICLE_H
 
 
-class Vehicle {
+#include <string>
 
+class Vehicle {
+public:
+    /**
+     * Value of the maximum volume that each vehicle can offer
+     */
+    int volMax;
+    /**
+     * Value of the maximum weight that each vehicle can offer
+     */
+    int pesoMax;
+    /**
+     * Cost of each transportation
+     */
+    int cost;
+    Vehicle(int vol, int peso, int cos);
+    std::string toString();
 };
 
 
