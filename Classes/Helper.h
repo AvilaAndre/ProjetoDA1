@@ -10,9 +10,7 @@
 #include <iostream>
 #include <fstream>
 #include "Vehicle.h"
-#include "Delivery.h" //Comment this to test it
-
-//class Delivery; Uncomment this to test
+#include "Delivery.h"
 
 class Helper {
 public:

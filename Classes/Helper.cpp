@@ -23,9 +23,9 @@ void Helper::ReadDeliveries(std::vector<Delivery> *deliveries) {
                 std::string reward = line.substr(last_space, line.substr(last_space).find(' '));
                 last_space = last_space + 1 + line.substr(last_space).find(' ');
                 std::string duration = line.substr(last_space, line.substr(last_space).find(' '));
-                std::cout << line << std::endl;
-                std::cout << "volume:" << volume << " weight:" << weight << " reward:" << reward << " duration:" << duration << std::endl;
-                deliveries->emplace_back(std::stoi(volume), std::stoi(weight), std::stoi(reward), std::stoi(duration)); //Comment this to test it!
+                //std::cout << line << std::endl;
+                //std::cout << "volume:" << volume << " weight:" << weight << " reward:" << reward << " duration:" << duration << std::endl;
+                deliveries->emplace_back(false, std::stoi(volume), std::stoi(weight), std::stoi(reward), std::stoi(duration));
             }
         }
     }
@@ -54,8 +54,8 @@ void Helper::ReadVehicles(std::vector<Vehicle> *vehicles) {
                 std::string weight = line.substr(last_space, line.substr(last_space).find(' '));
                 last_space = last_space + 1 + line.substr(last_space).find(' ');
                 std::string cost = line.substr(last_space, line.substr(last_space).find(' '));
-                std::cout << line << std::endl;
-                std::cout << "volume:" << volume << " weight:" << weight << " cost:" << cost << std::endl;
+                //std::cout << line << std::endl;
+                //std::cout << "volume:" << volume << " weight:" << weight << " cost:" << cost << std::endl;
                 vehicles->emplace_back(std::stoi(volume), std::stoi(weight), std::stoi(cost));
             }
         }

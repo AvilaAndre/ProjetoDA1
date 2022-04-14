@@ -12,6 +12,11 @@ int main() {
     for (auto carrinha : vehicles) {
         std::cout << carrinha.toString() << std::endl;
     }
+    std::vector<Delivery> deliveries;
+    reader.ReadDeliveries(&deliveries);
+    for (auto encomenda : deliveries) {
+        std::cout << encomenda.toString() << std::endl;
+    }
     return 0;
 }
 

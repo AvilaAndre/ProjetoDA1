@@ -3,3 +3,23 @@
 //
 
 #include "Delivery.h"
+
+Delivery::Delivery(bool express, int wei, int vol, int rew, int dur) {
+    if (express) {
+        type = Normal;
+    } else {
+        type = Express;
+    }
+
+    this->weight = wei;
+    this->volume = vol;
+    this->reward = rew;
+    this->duration = dur;
+}
+
+std::string Delivery::toString() {
+    if (type == Normal)
+        return "Delivery type Normal, weight " + std::to_string(this->weight) + ", volume " + std::to_string(this->volume) + ", reward " + std::to_string(this->reward) + ", duration " + std::to_string(this->duration);
+    else
+        return "Delivery type Express, weight " + std::to_string(this->weight) + ", volume " + std::to_string(this->volume) + ", reward " + std::to_string(this->reward) + ", duration " + std::to_string(this->duration);
+}
