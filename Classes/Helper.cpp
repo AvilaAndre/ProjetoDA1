@@ -141,8 +141,6 @@ int Helper::deliveryFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> v
     int res = 0;
 
     for (int i = 0; i < delis.size(); i++) {
-        // Find the first bin that can accommodate
-        // weight[i]
         int j;
         for (j = 0; j < res; j++) {
             if (vans[j].getVolume() >= delis[i].getVolume() && vans[j].getWeight() >= delis[i].getWeight()) {
@@ -152,7 +150,7 @@ int Helper::deliveryFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> v
             }
         }
 
-        // If no bin could accommodate weight[i]
+        // If no vehicle of the already carrying cargo can take this cargo, check if there are vehicles available or if it is supposed to be discarded.
         if (j == res && res < vans.size()) {
             vans[res].addCargo(delis[i].getVolume(), delis[i].getWeight());
             res++;

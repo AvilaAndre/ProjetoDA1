@@ -25,10 +25,28 @@ public:
      * Reads the values from the file carrinhas.txt creating objects that will be stored in the @param vehicles vector.
      */
     void ReadVehicles(std::vector<Vehicle> *vehicles);
-
+    /**
+     * Sorts the delis and vans vectors giving priority to the volume of the deliveries and the maximum a vehicle takes, and only then the weight.
+     * @param delis a vector with deliveries.
+     * @param vans a vector with the vehicles.
+     * @param leftovers a vector that receives the deliveries that aren't doing to be delivered.
+     */
     int firstFitDecVol(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
+    /**
+     * Sorts the delis and vans vectors giving priority to the weight of the deliveries and the maximum a vehicle takes, and only then the volume.
+     * @param delis a vector with deliveries.
+     * @param vans a vector with the vehicles.
+     * @param leftovers a vector that receives the deliveries that aren't doing to be delivered.
+     */
     int firstFitDecWei(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
-
+    /**
+     * Applies the First Fit Decreasing algorithm (one of the many solutions to the bin packing problem) adapted to this particular situation.
+     * It starts by looping through every cargo, first it adds cargo to the first vehicle, then it fills that vehicle with the next cargo, when the cargo being looped doesn't fit the vehicle(s) being filled it gets a new vehicle to fill, however, if there are no more vehicles the cargo is added to a vector with every delivery that is not going to be delivered.
+     * @param delis a vector with deliveries.
+     * @param vans a vector with the vehicles.
+     * @param leftovers a vector that receives the deliveries that aren't doing to be delivered.
+     * @return
+     */
     int deliveryFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
 };
 
