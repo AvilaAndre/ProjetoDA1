@@ -9,8 +9,11 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
-#include "Vehicle.h"
-#include "Delivery.h"
+#include <algorithm>
+
+
+class Delivery;
+class Vehicle;
 
 class Helper {
 public:
@@ -22,6 +25,11 @@ public:
      * Reads the values from the file carrinhas.txt creating objects that will be stored in the @param vehicles vector.
      */
     void ReadVehicles(std::vector<Vehicle> *vehicles);
+
+    int firstFitDecVol(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
+    int firstFitDecWei(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
+
+    int deliveryFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
 };
 
 

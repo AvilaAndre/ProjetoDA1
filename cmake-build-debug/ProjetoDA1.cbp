@@ -80,12 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/asus/CLionProjects/ProjetoDA1/Classes/Courier.cpp">
-			<Option target="ProjetoDA1"/>
-		</Unit>
-		<Unit filename="C:/Users/asus/CLionProjects/ProjetoDA1/Classes/Courier.h">
-			<Option target="ProjetoDA1"/>
-		</Unit>
 		<Unit filename="C:/Users/asus/CLionProjects/ProjetoDA1/Classes/Delivery.cpp">
 			<Option target="ProjetoDA1"/>
 		</Unit>

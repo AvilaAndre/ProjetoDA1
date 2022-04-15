@@ -23,3 +23,18 @@ std::string Delivery::toString() {
     else
         return "Delivery type Express, weight " + std::to_string(this->weight) + ", volume " + std::to_string(this->volume) + ", reward " + std::to_string(this->reward) + ", duration " + std::to_string(this->duration);
 }
+
+int Delivery::getWeight() {
+    return this->weight;
+}
+
+int Delivery::getVolume() {
+    return this->volume;
+}
+int Delivery::getReward() {
+    return this->reward;
+}
+
+int Delivery::getDuration() {
+    return this->duration;
+}

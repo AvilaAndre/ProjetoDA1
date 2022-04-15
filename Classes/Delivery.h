@@ -22,6 +22,10 @@ private:
 public:
     Delivery(bool express, int wei, int vol, int rew, int dur);
     std::string toString();
+    int getWeight();
+    int getVolume();
+    int getReward();
+    int getDuration();
 };
 
 

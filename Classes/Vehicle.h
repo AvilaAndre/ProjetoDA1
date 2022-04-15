@@ -13,17 +13,25 @@ public:
     /**
      * Value of the maximum volume that each vehicle can offer
      */
-    int volMax;
+    int maxVol;
     /**
      * Value of the maximum weight that each vehicle can offer
      */
-    int pesoMax;
+    int maxWeight;
     /**
      * Cost of each transportation
      */
+    int volume;
+    int weight;
     int cost;
     Vehicle(int vol, int peso, int cos);
     std::string toString();
+    int getMaxVolume();
+    int getMaxWeight();
+    int getVolume();
+    int getWeight();
+    int getCost();
+    void addCargo(int vol, int wei);
 };
 
 
