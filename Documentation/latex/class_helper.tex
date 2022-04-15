@@ -1,0 +1,94 @@
+\hypertarget{class_helper}{}\doxysection{Helper Class Reference}
+\label{class_helper}\index{Helper@{Helper}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_helper_ac258bf2cb4753bbcd0a7a92163f43d98}{Read\+Deliveries}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$deliveries)
+\item 
+void \mbox{\hyperlink{class_helper_ab9ad1c049dce0b2e28df9d27ad8188f8}{Read\+Vehicles}} (std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ $\ast$vehicles)
+\item 
+int \mbox{\hyperlink{class_helper_ac5a86fe73e22a959a5eb9e8d91daf5e7}{first\+Fit\+Dec\+Vol}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftovers)
+\item 
+int \mbox{\hyperlink{class_helper_a7f78302a99befc17c40884bb81f9bd5a}{first\+Fit\+Dec\+Wei}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftovers)
+\item 
+int \mbox{\hyperlink{class_helper_abb6a727c7fa39619c8d106feb4aea19e}{delivery\+First\+Fit}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftovers)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_helper_abb6a727c7fa39619c8d106feb4aea19e}\label{class_helper_abb6a727c7fa39619c8d106feb4aea19e}} 
+\index{Helper@{Helper}!deliveryFirstFit@{deliveryFirstFit}}
+\index{deliveryFirstFit@{deliveryFirstFit}!Helper@{Helper}}
+\doxysubsubsection{\texorpdfstring{deliveryFirstFit()}{deliveryFirstFit()}}
+{\footnotesize\ttfamily int Helper\+::delivery\+First\+Fit (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$}]{delis,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$}]{vans,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$}]{leftovers }\end{DoxyParamCaption})}
+
+Applies the First Fit Decreasing algorithm (one of the many solutions to the bin packing problem) adapted to this particular situation. It starts by looping through every cargo, first it adds cargo to the first vehicle, then it fills that vehicle with the next cargo, when the cargo being looped doesn\textquotesingle{}t fit the vehicle(s) being filled it gets a new vehicle to fill, however, if there are no more vehicles the cargo is added to a vector with every delivery that is not going to be delivered. 
+\begin{DoxyParams}{Parameters}
+{\em delis} & a vector with deliveries. \\
+\hline
+{\em vans} & a vector with the vehicles. \\
+\hline
+{\em leftovers} & a vector that receives the deliveries that aren\textquotesingle{}t doing to be delivered. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_helper_ac5a86fe73e22a959a5eb9e8d91daf5e7}\label{class_helper_ac5a86fe73e22a959a5eb9e8d91daf5e7}} 
+\index{Helper@{Helper}!firstFitDecVol@{firstFitDecVol}}
+\index{firstFitDecVol@{firstFitDecVol}!Helper@{Helper}}
+\doxysubsubsection{\texorpdfstring{firstFitDecVol()}{firstFitDecVol()}}
+{\footnotesize\ttfamily int Helper\+::first\+Fit\+Dec\+Vol (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$}]{delis,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$}]{vans,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$}]{leftovers }\end{DoxyParamCaption})}
+
+Sorts the delis and vans vectors giving priority to the volume of the deliveries and the maximum a vehicle takes, and only then the weight. 
+\begin{DoxyParams}{Parameters}
+{\em delis} & a vector with deliveries. \\
+\hline
+{\em vans} & a vector with the vehicles. \\
+\hline
+{\em leftovers} & a vector that receives the deliveries that aren\textquotesingle{}t doing to be delivered. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_helper_a7f78302a99befc17c40884bb81f9bd5a}\label{class_helper_a7f78302a99befc17c40884bb81f9bd5a}} 
+\index{Helper@{Helper}!firstFitDecWei@{firstFitDecWei}}
+\index{firstFitDecWei@{firstFitDecWei}!Helper@{Helper}}
+\doxysubsubsection{\texorpdfstring{firstFitDecWei()}{firstFitDecWei()}}
+{\footnotesize\ttfamily int Helper\+::first\+Fit\+Dec\+Wei (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$}]{delis,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$}]{vans,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$}]{leftovers }\end{DoxyParamCaption})}
+
+Sorts the delis and vans vectors giving priority to the weight of the deliveries and the maximum a vehicle takes, and only then the volume. 
+\begin{DoxyParams}{Parameters}
+{\em delis} & a vector with deliveries. \\
+\hline
+{\em vans} & a vector with the vehicles. \\
+\hline
+{\em leftovers} & a vector that receives the deliveries that aren\textquotesingle{}t doing to be delivered. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_helper_ac258bf2cb4753bbcd0a7a92163f43d98}\label{class_helper_ac258bf2cb4753bbcd0a7a92163f43d98}} 
+\index{Helper@{Helper}!ReadDeliveries@{ReadDeliveries}}
+\index{ReadDeliveries@{ReadDeliveries}!Helper@{Helper}}
+\doxysubsubsection{\texorpdfstring{ReadDeliveries()}{ReadDeliveries()}}
+{\footnotesize\ttfamily void Helper\+::\+Read\+Deliveries (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$}]{deliveries }\end{DoxyParamCaption})}
+
+Reads the values from the file encomendas.\+txt creating objects that will be stored in the
+\begin{DoxyParams}{Parameters}
+{\em deliveries} & vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_helper_ab9ad1c049dce0b2e28df9d27ad8188f8}\label{class_helper_ab9ad1c049dce0b2e28df9d27ad8188f8}} 
+\index{Helper@{Helper}!ReadVehicles@{ReadVehicles}}
+\index{ReadVehicles@{ReadVehicles}!Helper@{Helper}}
+\doxysubsubsection{\texorpdfstring{ReadVehicles()}{ReadVehicles()}}
+{\footnotesize\ttfamily void Helper\+::\+Read\+Vehicles (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ $\ast$}]{vehicles }\end{DoxyParamCaption})}
+
+Reads the values from the file carrinhas.\+txt creating objects that will be stored in the
+\begin{DoxyParams}{Parameters}
+{\em vehicles} & vector. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Classes/Helper.\+h\item 
+Classes/Helper.\+cpp\end{DoxyCompactItemize}

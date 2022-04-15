@@ -1,0 +1,38 @@
+\hypertarget{_delivery_8h_source}{}\doxysection{Delivery.\+h}
+\label{_delivery_8h_source}\index{Classes/Delivery.h@{Classes/Delivery.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by asus on 13/04/2022.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef PROJETODA1\_DELIVERY\_H}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define PROJETODA1\_DELIVERY\_H}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{enum} DELIVERY\_TYPE \{}
+\DoxyCodeLine{11     Normal = 0,}
+\DoxyCodeLine{12     Express = 1}
+\DoxyCodeLine{13 \};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_delivery}{Delivery}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     DELIVERY\_TYPE type;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} weight;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} volume;}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} reward;}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} duration;}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_delivery_aa53bea259dc496f2a160f72dd82b544b}{Delivery}}(\textcolor{keywordtype}{bool} express, \textcolor{keywordtype}{int} wei, \textcolor{keywordtype}{int} vol, \textcolor{keywordtype}{int} rew, \textcolor{keywordtype}{int} dur);}
+\DoxyCodeLine{35     std::string \mbox{\hyperlink{class_delivery_a09c5176df9736b063f9ce0de4a22fa3a}{toString}}();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_delivery_a9d5c1528ca8843df51789ce8d0a32d6e}{getWeight}}();}
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_delivery_a4d8231ac57c255be673d95d9361c2eea}{getVolume}}();}
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_delivery_a5c05f9b9dad14bc339f7ea532aba8a05}{getReward}}();}
+\DoxyCodeLine{51     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_delivery_a19a98b08c80bfabe09c573c8e23965e7}{getDuration}}();}
+\DoxyCodeLine{52 \};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJETODA1\_DELIVERY\_H}}
+
+\end{DoxyCode}

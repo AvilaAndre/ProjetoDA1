@@ -1,0 +1,161 @@
+\hypertarget{class_vehicle}{}\doxysection{Vehicle Class Reference}
+\label{class_vehicle}\index{Vehicle@{Vehicle}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vehicle_a915bf08499a025484613c816fd5dbf0a}{Vehicle}} (int vol, int peso, int cos)
+\item 
+std\+::string \mbox{\hyperlink{class_vehicle_ab64ae8d96da2f63b0f9445a1e60549c8}{to\+String}} ()
+\item 
+int \mbox{\hyperlink{class_vehicle_a1a1b8e1e5fb3dd11819775e6aa277a94}{get\+Max\+Volume}} ()
+\item 
+int \mbox{\hyperlink{class_vehicle_a07cae173ff595831c4a82cc90392ed53}{get\+Max\+Weight}} ()
+\item 
+int \mbox{\hyperlink{class_vehicle_a878eda60be6b7f857dc8f4dc6217b146}{get\+Volume}} ()
+\item 
+int \mbox{\hyperlink{class_vehicle_ab240128fd0a73f739efe14ce5addc84d}{get\+Weight}} ()
+\item 
+int \mbox{\hyperlink{class_vehicle_a7972844ea4f8e2e157622d6e3c1004d2}{get\+Cost}} ()
+\item 
+void \mbox{\hyperlink{class_vehicle_ab6348c18069911e16a47776ce2eead5e}{add\+Cargo}} (int vol, int wei)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_vehicle_a3b3b2161882d2fef493e0ff9db282cf6}{max\+Vol}}
+\item 
+int \mbox{\hyperlink{class_vehicle_af16684d753c79db1a252892f4a5ad7f8}{max\+Weight}}
+\item 
+int \mbox{\hyperlink{class_vehicle_a6fa7ee2680838571f02e403f9ff2f08f}{volume}}
+\item 
+int \mbox{\hyperlink{class_vehicle_ab42632f1e91f7331aed6207f0f5deab6}{weight}}
+\item 
+int \mbox{\hyperlink{class_vehicle_a97e88b26a2b77d666983a37c15d83df8}{cost}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_vehicle_a915bf08499a025484613c816fd5dbf0a}\label{class_vehicle_a915bf08499a025484613c816fd5dbf0a}} 
+\index{Vehicle@{Vehicle}!Vehicle@{Vehicle}}
+\index{Vehicle@{Vehicle}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{Vehicle()}{Vehicle()}}
+{\footnotesize\ttfamily Vehicle\+::\+Vehicle (\begin{DoxyParamCaption}\item[{int}]{vol,  }\item[{int}]{peso,  }\item[{int}]{cos }\end{DoxyParamCaption})}
+
+The constructor of the vehicle class. 
+\begin{DoxyParams}{Parameters}
+{\em vol} & Defines the value of max\+Vol and volume. \\
+\hline
+{\em peso} & Defines the value of weight. \\
+\hline
+{\em cos} & Defines the value of cost. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vehicle_ab6348c18069911e16a47776ce2eead5e}\label{class_vehicle_ab6348c18069911e16a47776ce2eead5e}} 
+\index{Vehicle@{Vehicle}!addCargo@{addCargo}}
+\index{addCargo@{addCargo}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{addCargo()}{addCargo()}}
+{\footnotesize\ttfamily void Vehicle\+::add\+Cargo (\begin{DoxyParamCaption}\item[{int}]{vol,  }\item[{int}]{wei }\end{DoxyParamCaption})}
+
+Subtracts the value vol and wei from volume and weight respectively. 
+\begin{DoxyParams}{Parameters}
+{\em vol} & The volume to subtract. \\
+\hline
+{\em wei} & The weight to subtract. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vehicle_a7972844ea4f8e2e157622d6e3c1004d2}\label{class_vehicle_a7972844ea4f8e2e157622d6e3c1004d2}} 
+\index{Vehicle@{Vehicle}!getCost@{getCost}}
+\index{getCost@{getCost}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Vehicle\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns the cost value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vehicle_a1a1b8e1e5fb3dd11819775e6aa277a94}\label{class_vehicle_a1a1b8e1e5fb3dd11819775e6aa277a94}} 
+\index{Vehicle@{Vehicle}!getMaxVolume@{getMaxVolume}}
+\index{getMaxVolume@{getMaxVolume}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{getMaxVolume()}{getMaxVolume()}}
+{\footnotesize\ttfamily int Vehicle\+::get\+Max\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns the max\+Vol value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vehicle_a07cae173ff595831c4a82cc90392ed53}\label{class_vehicle_a07cae173ff595831c4a82cc90392ed53}} 
+\index{Vehicle@{Vehicle}!getMaxWeight@{getMaxWeight}}
+\index{getMaxWeight@{getMaxWeight}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{getMaxWeight()}{getMaxWeight()}}
+{\footnotesize\ttfamily int Vehicle\+::get\+Max\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns the max\+Weight value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vehicle_a878eda60be6b7f857dc8f4dc6217b146}\label{class_vehicle_a878eda60be6b7f857dc8f4dc6217b146}} 
+\index{Vehicle@{Vehicle}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily int Vehicle\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns the volume value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vehicle_ab240128fd0a73f739efe14ce5addc84d}\label{class_vehicle_ab240128fd0a73f739efe14ce5addc84d}} 
+\index{Vehicle@{Vehicle}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily int Vehicle\+::get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns the weight value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vehicle_ab64ae8d96da2f63b0f9445a1e60549c8}\label{class_vehicle_ab64ae8d96da2f63b0f9445a1e60549c8}} 
+\index{Vehicle@{Vehicle}!toString@{toString}}
+\index{toString@{toString}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string Vehicle\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Returns a string with a few information about this class, primarily created for debugging. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_vehicle_a97e88b26a2b77d666983a37c15d83df8}\label{class_vehicle_a97e88b26a2b77d666983a37c15d83df8}} 
+\index{Vehicle@{Vehicle}!cost@{cost}}
+\index{cost@{cost}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{cost}{cost}}
+{\footnotesize\ttfamily int Vehicle\+::cost}
+
+Cost of each transportation. \mbox{\Hypertarget{class_vehicle_a3b3b2161882d2fef493e0ff9db282cf6}\label{class_vehicle_a3b3b2161882d2fef493e0ff9db282cf6}} 
+\index{Vehicle@{Vehicle}!maxVol@{maxVol}}
+\index{maxVol@{maxVol}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{maxVol}{maxVol}}
+{\footnotesize\ttfamily int Vehicle\+::max\+Vol}
+
+Value of the maximum volume that each vehicle can offer. \mbox{\Hypertarget{class_vehicle_af16684d753c79db1a252892f4a5ad7f8}\label{class_vehicle_af16684d753c79db1a252892f4a5ad7f8}} 
+\index{Vehicle@{Vehicle}!maxWeight@{maxWeight}}
+\index{maxWeight@{maxWeight}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{maxWeight}{maxWeight}}
+{\footnotesize\ttfamily int Vehicle\+::max\+Weight}
+
+Value of the maximum weight that each vehicle can offer. \mbox{\Hypertarget{class_vehicle_a6fa7ee2680838571f02e403f9ff2f08f}\label{class_vehicle_a6fa7ee2680838571f02e403f9ff2f08f}} 
+\index{Vehicle@{Vehicle}!volume@{volume}}
+\index{volume@{volume}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{volume}{volume}}
+{\footnotesize\ttfamily int Vehicle\+::volume}
+
+The value of the volume this vehicle is able to transport, useful for changing the volume left while keeping track of the maximum. \mbox{\Hypertarget{class_vehicle_ab42632f1e91f7331aed6207f0f5deab6}\label{class_vehicle_ab42632f1e91f7331aed6207f0f5deab6}} 
+\index{Vehicle@{Vehicle}!weight@{weight}}
+\index{weight@{weight}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily int Vehicle\+::weight}
+
+The value of the weight this vehicle is able to transport, useful for changing the weight left while keeping track of the maximum. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Classes/Vehicle.\+h\item 
+Classes/Vehicle.\+cpp\end{DoxyCompactItemize}
