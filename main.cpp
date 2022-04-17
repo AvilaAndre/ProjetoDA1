@@ -9,17 +9,18 @@ void print(std::string yo) {
 }
 
 void Situation1() {
-    print("Otimizacao do número de estafetas \numa viagem por estafeta e estão sempre disponveis");
+    print("* Otimizacao do numero de estafetas");
+    std::cout << "*" << std::endl;
     Helper sitHelper;
     std::vector<Vehicle> vehicles;
     sitHelper.ReadVehicles(&vehicles);
     std::vector<Delivery> deliveries;
     sitHelper.ReadDeliveries(&deliveries);
 
-    std::vector<Delivery> volLeftovers;
-    std::vector<Delivery> weiLeftovers;
-    print(std::to_string(sitHelper.firstFitDecVol(deliveries, vehicles, &volLeftovers)));
-    print(std::to_string(sitHelper.firstFitDecWei(deliveries, vehicles, &weiLeftovers)));
+    std::vector<Delivery> leftovers;
+    std::cout << "* Estafetas: ";
+    print(std::to_string(sitHelper.firstFit(deliveries, vehicles, &leftovers)));
+    std::cout << "* Encomendas por entregar: " << leftovers.size() << std::endl;
 
 }
 
@@ -67,7 +68,7 @@ int main() {
         std::cout << encomenda.toString() << std::endl;
     }
      */
-    std::cout << "********************************************"<<std::endl;
+    std::cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"<<std::endl;
     std::cout << "* Cenario_";
     std::cin >> n;
     std::cout << "*" << std::endl;
@@ -82,7 +83,7 @@ int main() {
             Situation3();
             break;
     }
-    std::cout << "********************************************"<<std::endl;
+    std::cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"<<std::endl;
     return 0;
 }
 
