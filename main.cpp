@@ -69,7 +69,7 @@ int main() {
     }
      */
     std::cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"<<std::endl;
-    std::cout << "* Cenario_";
+    std::cout << "* Cenário: ";
     std::cin >> n;
     std::cout << "*" << std::endl;
     switch(n) {
