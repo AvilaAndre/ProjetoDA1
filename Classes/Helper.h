@@ -61,6 +61,8 @@ public:
     int bestFitDecWei(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
     int deliveryBestFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
     int deliveryOwnBestFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftover);
+    int sit2WIP(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftover);
+    int lucrativeFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftover);
 };
 
 

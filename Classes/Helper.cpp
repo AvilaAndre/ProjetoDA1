@@ -295,3 +295,70 @@ int Helper::deliveryOwnBestFit(std::vector<Delivery> delis, std::vector<Vehicle>
     std::cout << "LeftOvers! " << delis.size() << std::endl;
     return i;
 }
+
+
+bool compareVehicleCostRatio(Vehicle i1, Vehicle i2) {
+    //Cost per volume and weight summed.
+    return ((double)i1.getCost()/((double)i1.getVolume()+(double)i1.getWeight()) > (double)i2.getCost()/((double)i2.getVolume()+(double)i2.getWeight()));
+}
+
+bool compareDeliveryReturnRatio(Delivery i1, Delivery i2) {
+    return ((double)i1.getReward()/((double)i1.getVolume()+(double)i1.getWeight()) > (double)i2.getReward()/((double)i2.getVolume()+(double)i2.getWeight()));
+}
+
+
+bool compareVehicleCost(Vehicle i1, Vehicle i2) {
+    //Cost per volume and weight summed.
+    return i1.getCost() < i2.getCost();
+}
+
+bool compareDeliveryReturn(Delivery i1, Delivery i2) {
+    return i1.getReward() > i2.getReward();
+}
+
+
+
+int Helper::sit2WIP(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers) {
+    std::sort(delis.begin(), delis.end(), compareDeliveryReturn);
+
+    // As the original First Fit has every bin with the same size we will sort our vector of "bins" in order to have the
+    //ones that can take more deliveries first.
+    std::sort(vans.begin(), vans.end(), compareVehicleCost);
+
+    return lucrativeFirstFit(delis, vans, leftovers);
+}
+
+int Helper::lucrativeFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftover) {
+    int res = 0;
+    int money = 0;
+
+    for (int i = 0; i < delis.size(); i++) {
+        int j;
+        for (j = 0; j < res; j++) {
+            if (vans[j].getVolume() >= delis[i].getVolume() && vans[j].getWeight() >= delis[i].getWeight()) {
+                vans[j].addCargo(delis[i].getVolume(), delis[i].getWeight());
+                money += delis[i].getReward();
+                std::cout << "Money:" << money << std::endl;
+
+                break;
+            }
+        }
+
+        // If no vehicle of the already carrying cargo can take this cargo, check if there are vehicles available or if it is supposed to be discarded.
+        if (j == res && res < vans.size()) {
+            vans[res].addCargo(delis[i].getVolume(), delis[i].getWeight());
+            money += delis[i].getReward();
+            std::cout << "Money:" << money << std::endl;
+            res++;
+        }
+        else if (j == res)
+            leftover->push_back(delis[i]);
+    }
+    std::cout << "Before costs" << std::endl;
+    std::cout << money << std::endl;
+    for (int i = 0; i < res; i++)
+        money -= vans[i].getCost();
+    std::cout << "After costs" << std::endl;
+    std::cout << money << std::endl;
+    return res;
+}
