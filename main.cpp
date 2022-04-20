@@ -52,45 +52,45 @@ void Situation3() {
     std::cout << "* Entregas: " << deliveries.size() - leftovers.size() << std::endl << "* Encomendas para devolver: " << leftovers.size() << std::endl;
     std::cout << "* Tempo medio de entrega: " << (28800- timeLeft)/(deliveries.size() - leftovers.size()) << " segundos" << std::endl;
 }
+void separator() {
+    std::cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << std::endl;
+}
 
 int main() {
     int n;
-    /*
-    Helper reader;
-    std::vector<Vehicle> vehicles;
-    reader.ReadVehicles(&vehicles);
-    for (auto carrinha : vehicles) {
-        std::cout << carrinha.toString() << std::endl;
-    }
-    std::vector<Delivery> deliveries;
-    reader.ReadDeliveries(&deliveries);
-    for (auto encomenda : deliveries) {
-        std::cout << encomenda.toString() << std::endl;
-    }
-     */
-    std::cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"<<std::endl;
-    std::cout << "* Cenário: ";
-    std::cin >> n;
-    std::cout << "*" << std::endl;
-    switch(n) {
-        case 1:
-            Situation1();
-            break;
-        case 2 :
-            Situation2();
-            break;
-        case 3 :
-            Situation3();
-            break;
-    }
-    std::cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *"<<std::endl;
-    return 0;
-}
 
-/*
- * Classes:
- *  Delivery
- *  Courier
- *  Vehicle
- *  Helper
- */
+    while (true) {
+        separator();
+        std::cout << "* PRESS 0 TO QUIT" << std::endl << "*" << std::endl;
+        std::cout << "* Cenario:";
+        std::cin >> n;
+        std::cout << "*" << std::endl;
+        if (std::cin.eof()) {
+            separator();
+            exit(1);e
+        }
+        if (!std::cin.good()) {
+            std::cout << "\n Invalid input!\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            continue;
+        }
+        switch (n) {
+            case 1:
+                Situation1();
+                break;
+            case 2 :
+                Situation2();
+                break;
+            case 3 :
+                Situation3();
+                break;
+            case 0 :
+                separator();
+                exit(0);
+            default:
+                std::cout << "\n Invalid input!\n";
+        }
+    }
+ }
+
