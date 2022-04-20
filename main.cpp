@@ -67,7 +67,7 @@ int main() {
         std::cout << "*" << std::endl;
         if (std::cin.eof()) {
             separator();
-            exit(1);e
+            exit(1);
         }
         if (!std::cin.good()) {
             std::cout << "\n Invalid input!\n";
