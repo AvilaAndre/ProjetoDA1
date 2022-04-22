@@ -60,8 +60,15 @@ public:
      * @return Returns the amount of vehicles needed.
      */
     int lucrativeFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftover);
-
+    /**
+     * Sorts the vehicles through their cost increasingly.
+     * @param vehicles A vector of vehicles.
+     */
     void sortVehicles(std::vector<Vehicle> vehicles);
+    /**
+     * Sorts the deliveries through their reward decreasingly.
+     * @param delis
+     */
     void sortDeliveries(std::vector<Delivery> delis);
 };
 

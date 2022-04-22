@@ -83,6 +83,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ada7d8c3d1c6360fff709c62f65641959"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fcdf36c52b101f961ef2d5c71a74bcd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_helper.html#a8fcdf36c52b101f961ef2d5c71a74bcd">lucrativeFirstFit</a> (std::vector&lt; <a class="el" href="class_delivery.html">Delivery</a> &gt; delis, std::vector&lt; <a class="el" href="class_vehicle.html">Vehicle</a> &gt; vans, std::vector&lt; <a class="el" href="class_delivery.html">Delivery</a> &gt; *leftover)</td></tr>
 <tr class="separator:a8fcdf36c52b101f961ef2d5c71a74bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac589a32cfc29994a802cf5f3283b5ad4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_helper.html#ac589a32cfc29994a802cf5f3283b5ad4">sortVehicles</a> (std::vector&lt; <a class="el" href="class_vehicle.html">Vehicle</a> &gt; vehicles)</td></tr>
+<tr class="separator:ac589a32cfc29994a802cf5f3283b5ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a6c38a6d37ab0230b8455ec368a571"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_helper.html#a25a6c38a6d37ab0230b8455ec368a571">sortDeliveries</a> (std::vector&lt; <a class="el" href="class_delivery.html">Delivery</a> &gt; delis)</td></tr>
+<tr class="separator:a25a6c38a6d37ab0230b8455ec368a571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="abb6a727c7fa39619c8d106feb4aea19e" name="abb6a727c7fa39619c8d106feb4aea19e"></a>
@@ -302,6 +306,54 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns the amount of vehicles needed. </dd></dl>
+
+</div>
+</div>
+<a id="a25a6c38a6d37ab0230b8455ec368a571" name="a25a6c38a6d37ab0230b8455ec368a571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a6c38a6d37ab0230b8455ec368a571">&#9670;&nbsp;</a></span>sortDeliveries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Helper::sortDeliveries </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_delivery.html">Delivery</a> &gt;&#160;</td>
+          <td class="paramname"><em>delis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sorts the deliveries through their reward decreasingly. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delis</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac589a32cfc29994a802cf5f3283b5ad4" name="ac589a32cfc29994a802cf5f3283b5ad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac589a32cfc29994a802cf5f3283b5ad4">&#9670;&nbsp;</a></span>sortVehicles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Helper::sortVehicles </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_vehicle.html">Vehicle</a> &gt;&#160;</td>
+          <td class="paramname"><em>vehicles</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Sorts the vehicles through their cost increasingly. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vehicles</td><td>A vector of vehicles. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

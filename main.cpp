@@ -113,7 +113,7 @@ void Situation3() {
     }
 
     std::cout << "* Deliveries: " << deliveries.size() - leftovers.size() << std::endl << "* Deliveries to return: " << leftovers.size() << std::endl;
-    std::cout << "* Average delivery time: " << (28800- timeLeft)/(deliveries.size() - leftovers.size()) << " seconds" << std::endl;
+    std::cout << "* Average delivery time: " << (28800 - timeLeft)/(deliveries.size() - leftovers.size()) << " seconds" << std::endl;
 }
 void separator() {
     std::cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << std::endl;

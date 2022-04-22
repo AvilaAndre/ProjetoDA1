@@ -14,6 +14,10 @@ int \mbox{\hyperlink{class_helper_abb6a727c7fa39619c8d106feb4aea19e}{delivery\+F
 int \mbox{\hyperlink{class_helper_ada7d8c3d1c6360fff709c62f65641959}{sit2\+First\+Fit}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftover)
 \item 
 int \mbox{\hyperlink{class_helper_a8fcdf36c52b101f961ef2d5c71a74bcd}{lucrative\+First\+Fit}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftover)
+\item 
+void \mbox{\hyperlink{class_helper_ac589a32cfc29994a802cf5f3283b5ad4}{sort\+Vehicles}} (std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vehicles)
+\item 
+void \mbox{\hyperlink{class_helper_a25a6c38a6d37ab0230b8455ec368a571}{sort\+Deliveries}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis)
 \end{DoxyCompactItemize}
 
 
@@ -112,6 +116,28 @@ It\textquotesingle{}s whole purpose is to sort delis and vans and execute lucrat
 \begin{DoxyReturn}{Returns}
 Returns the amount of vehicles needed. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_helper_a25a6c38a6d37ab0230b8455ec368a571}\label{class_helper_a25a6c38a6d37ab0230b8455ec368a571}} 
+\index{Helper@{Helper}!sortDeliveries@{sortDeliveries}}
+\index{sortDeliveries@{sortDeliveries}!Helper@{Helper}}
+\doxysubsubsection{\texorpdfstring{sortDeliveries()}{sortDeliveries()}}
+{\footnotesize\ttfamily void Helper\+::sort\+Deliveries (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$}]{delis }\end{DoxyParamCaption})}
+
+Sorts the deliveries through their reward decreasingly. 
+\begin{DoxyParams}{Parameters}
+{\em delis} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_helper_ac589a32cfc29994a802cf5f3283b5ad4}\label{class_helper_ac589a32cfc29994a802cf5f3283b5ad4}} 
+\index{Helper@{Helper}!sortVehicles@{sortVehicles}}
+\index{sortVehicles@{sortVehicles}!Helper@{Helper}}
+\doxysubsubsection{\texorpdfstring{sortVehicles()}{sortVehicles()}}
+{\footnotesize\ttfamily void Helper\+::sort\+Vehicles (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$}]{vehicles }\end{DoxyParamCaption})}
+
+Sorts the vehicles through their cost increasingly. 
+\begin{DoxyParams}{Parameters}
+{\em vehicles} & A vector of vehicles. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -227,20 +227,6 @@ int Helper::lucrativeFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> 
     return res;
 }
 
-void Helper::sortVehicles(std::vector<Vehicle> vehicles) {
-    for (int i = 0; i < vehicles.size() - 1; i++) {
-        double ratio1 = vehicles[i].getWeight() * vehicles[i].getVolume() / vehicles[i].getCost();
-        for (int j = 1; j < vehicles.size(); j++) {
-            double ratio2 = vehicles[j].getWeight() * vehicles[j].getVolume() / vehicles[j].getCost();
-            if (ratio1 < ratio2) {
-                Vehicle temp = vehicles[j];
-                vehicles[j] = vehicles[i];
-                vehicles[i] = temp;
-            }
-        }
-    }
-}
-
 //sort pelos veiculos mais baratos
 void Helper::sortVehicles(std::vector<Vehicle> vehicles) {
     for (int i = 0; i < vehicles.size() - 1; i++) {
