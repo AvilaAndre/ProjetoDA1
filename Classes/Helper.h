@@ -30,21 +30,21 @@ public:
      * Sorts the delis and vans vectors giving priority to the volume of the deliveries and the maximum a vehicle takes, and only then the weight.
      * @param delis a vector with deliveries.
      * @param vans a vector with the vehicles.
-     * @param leftovers a vector that receives the deliveries that aren't doing to be delivered.
+     * @param leftovers a vector that receives the deliveries that aren't going to be delivered.
      */
     int firstFitDecVol(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
     /**
      * Sorts the delis and vans vectors giving priority to the weight of the deliveries and the maximum a vehicle takes, and only then the volume.
      * @param delis a vector with deliveries.
      * @param vans a vector with the vehicles.
-     * @param leftovers a vector that receives the deliveries that aren't doing to be delivered.
+     * @param leftovers a vector that receives the deliveries that aren't going to be delivered.
      */
     int firstFitDecWei(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
     /**
      * It's whole purpose is to sort delis and vans and execute deliveryFirstFit.
      * @param delis a vector with deliveries.
      * @param vans a vector with the vehicles.
-     * @param leftovers a vector that receives the deliveries that aren't doing to be delivered.
+     * @param leftovers a vector that receives the deliveries that aren't going to be delivered.
      * @return Returns the amount of vehicles needed.
      */
     int sit1FirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
@@ -53,19 +53,15 @@ public:
      * It starts by looping through every cargo, first it adds cargo to the first vehicle, then it fills that vehicle with the next cargo, when the cargo being looped doesn't fit the vehicle(s) being filled it gets a new vehicle to fill, however, if there are no more vehicles the cargo is added to a vector with every delivery that is not going to be delivered.
      * @param delis a vector with deliveries.
      * @param vans a vector with the vehicles.
-     * @param leftovers a vector that receives the deliveries that aren't doing to be delivered.
+     * @param leftovers a vector that receives the deliveries that aren't going to be delivered.
      * @return Returns the amount of vehicles needed.
      */
     int deliveryFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
-    int bestFitDecVol(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
-    int bestFitDecWei(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
-    int deliveryBestFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
-    int deliveryOwnBestFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftover);
     /**
      * It's whole purpose is to sort delis and vans and execute lucrativeFirstFit.
      * @param delis a vector with deliveries.
      * @param vans a vector with the vehicles.
-     * @param leftovers a vector that receives the deliveries that aren't doing to be delivered.
+     * @param leftovers a vector that receives the deliveries that aren't going to be delivered.
      * @return Returns the amount of vehicles needed.
      */
     int sit2FirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftover);
@@ -74,7 +70,7 @@ public:
      * It starts by looping through every cargo, first it adds cargo to the first vehicle, then it fills that vehicle with the next cargo, when the cargo being looped doesn't fit the vehicle(s) being filled it gets a new vehicle to fill, however, if there are no more vehicles the cargo is added to a vector with every delivery that is not going to be delivered.
      * @param delis a vector with deliveries.
      * @param vans a vector with the vehicles.
-     * @param leftovers a vector that receives the deliveries that aren't doing to be delivered.
+     * @param leftovers a vector that receives the deliveries that aren't going to be delivered.
      * @return Returns the amount of vehicles needed.
      */
     int lucrativeFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftover);
