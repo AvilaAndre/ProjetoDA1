@@ -115,11 +115,11 @@ bool compareVansWeiVol(Vehicle i1, Vehicle i2)
 }
 
 bool compareDeliveries(Delivery i1, Delivery i2) {
-    return (i1.getVolume() + i1.getWeight() > i2.getVolume() + i2.getWeight());
+    return (i1.getVolume() * i1.getWeight() > i2.getVolume() * i2.getWeight());
 }
 
 bool compareVans(Vehicle i1, Vehicle i2) {
-    return (i1.getVolume() + i1.getWeight() > i2.getVolume() + i2.getWeight());
+    return (i1.getVolume() * i1.getWeight() > i2.getVolume() * i2.getWeight());
 }
 
 int Helper::sit1FirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers) {
@@ -145,7 +145,6 @@ int Helper::deliveryFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> v
                 break;
             }
         }
-
         // If no vehicle of the already carrying cargo can take this cargo, check if there are vehicles available or if it is supposed to be discarded.
         if (j == res && res < vans.size()) {
             vans[res].addCargo(delis[i].getVolume(), delis[i].getWeight());
@@ -153,7 +152,6 @@ int Helper::deliveryFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> v
         }
         else if (j == res)
             leftover->push_back(delis[i]);
-
     }
 
     return res;
@@ -186,7 +184,7 @@ int Helper::sit2FirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans,
 
     // As the original First Fit has every bin with the same size we will sort our vector of "bins" in order to have the
     //ones that can take more deliveries first.
-    std::sort(vans.begin(), vans.end(), compareVehicleCost);
+    std::sort(vans.begin(), vans.end(), compareVans);
 
     return lucrativeFirstFit(delis, vans, leftovers);
 }
