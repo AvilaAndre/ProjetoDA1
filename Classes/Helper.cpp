@@ -143,7 +143,7 @@ int Helper::firstFitDecWei(std::vector<Delivery> delis, std::vector<Vehicle> van
 
 }
 
-int Helper::firstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers) {
+int Helper::sit1FirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers) {
     std::sort(delis.begin(), delis.end(), compareDeliveries);
 
     // As the original First Fit has every bin with the same size we will sort our vector of "bins" in order to have the
@@ -318,7 +318,7 @@ bool compareDeliveryReturn(Delivery i1, Delivery i2) {
 
 
 
-int Helper::sit2WIP(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers) {
+int Helper::sit2FirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers) {
     std::sort(delis.begin(), delis.end(), compareDeliveryReturn);
 
     // As the original First Fit has every bin with the same size we will sort our vector of "bins" in order to have the
@@ -338,7 +338,6 @@ int Helper::lucrativeFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> 
             if (vans[j].getVolume() >= delis[i].getVolume() && vans[j].getWeight() >= delis[i].getWeight()) {
                 vans[j].addCargo(delis[i].getVolume(), delis[i].getWeight());
                 money += delis[i].getReward();
-                std::cout << "Money:" << money << std::endl;
 
                 break;
             }
@@ -348,17 +347,21 @@ int Helper::lucrativeFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> 
         if (j == res && res < vans.size()) {
             vans[res].addCargo(delis[i].getVolume(), delis[i].getWeight());
             money += delis[i].getReward();
-            std::cout << "Money:" << money << std::endl;
             res++;
         }
         else if (j == res)
             leftover->push_back(delis[i]);
     }
-    std::cout << "Before costs" << std::endl;
+    int cost = 0;
+    std::cout << "* Total reward for deliveries: ";
     std::cout << money << std::endl;
-    for (int i = 0; i < res; i++)
+    for (int i = 0; i < res; i++) {
         money -= vans[i].getCost();
-    std::cout << "After costs" << std::endl;
+        cost += vans[i].getCost();
+    }
+    std::cout << "* Total cost for deliveries: ";
+    std::cout << cost << std::endl;
+    std::cout << "* Total profit: ";
     std::cout << money << std::endl;
     return res;
 }

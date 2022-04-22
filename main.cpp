@@ -8,53 +8,87 @@ void print(std::string yo) {
     std::cout << yo << std::endl;
 }
 
-void Situation1() {
-    print("* Otimizacao do numero de estafetas");
+void Situation1(std::vector<Delivery> deliveries) {
     std::cout << "*" << std::endl;
     Helper sitHelper;
     std::vector<Vehicle> vehicles;
     sitHelper.ReadVehicles(&vehicles);
-    std::vector<Delivery> deliveries;
     sitHelper.ReadDeliveries(&deliveries);
 
     std::vector<Delivery> leftovers;
-    std::cout << "* Estafetas: ";
-    print(std::to_string(sitHelper.firstFit(deliveries, vehicles, &leftovers)));
-    std::cout << "* Encomendas por entregar: " << leftovers.size() << std::endl;
+    std::cout << "* Couriers: ";
+    std::cout <<std::to_string(sitHelper.sit1FirstFit(deliveries, vehicles, &leftovers)) << std::endl;
+    std::cout << "* Deliveries not delivered: " << leftovers.size() << std::endl;
+
+    if (leftovers.size() == 0) return;
+    int n;
+    while (true) {
+        std::cout << "* Press 0 if you wish to go back to menu" << std::endl << "*" << std::endl;
+        std::cout << "* Press 1 if you wish to repeat adding the deliveries not delivered" << std::endl << "*" << std::endl;
+        std::cout << "* Cenario:";
+        std::cin >> n;
+        std::cout << "*" << std::endl;
+        if (std::cin.eof()) {
+            exit(1);
+        }
+        if (!std::cin.good()) {
+            std::cout << "\n Invalid input!\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            continue;
+        }
+        switch (n) {
+            case 0:
+                return;
+            case 1:
+                Situation1(leftovers);
+                return;
+            default:
+                continue;
+        }
+    }
 
 }
 
-void Situation2() {
-    /*
-    Cenario 2 otimizacao do lucro da empresa:
-    estafetas:
-    - cobram uma quantia pelo n total de pedidos entregues num dia.
-            pela entrega a empresa recebe uma quantia paga pelo solicitador
-    dos estafetas registados na plataforma deve-se selecionar os que maximizam o lucro da empresa naquele dia
-    os pedidos que nao puderem ser entregues sao descartados e retornam ao fornecedor
-    Dados de entrada:
-    E -> estafetas registados com capacidade de volume Ve, peso We e custo Ce
-    P -> pedidos a entregar com volume Vp, peso Wp e recompensa Rp
-
-    OBJETIVO PRINCIPAL: maximizar o lucro da empresa (diferença entre a receita total e o custo total)
-    para a entrega de todos os pedidos ou do maior número de pedidos, num dia, pelos estafetas
-            selecionados
-    */
-
-    //Organizar por custo/(volume + peso)
-
-   print("Situacao 2");
-
+void Situation2(std::vector<Delivery> deliveries) {
     Helper sitHelper;
     std::vector<Vehicle> vehicles;
     sitHelper.ReadVehicles(&vehicles);
-    std::vector<Delivery> deliveries;
     sitHelper.ReadDeliveries(&deliveries);
 
     std::vector<Delivery> leftovers;
-    std::cout << "* Estafetas: ";
-    print(std::to_string(sitHelper.sit2WIP(deliveries, vehicles, &leftovers)));
-    std::cout << "* Encomendas por entregar: " << leftovers.size() << std::endl;
+    int couriers =  sitHelper.sit2FirstFit(deliveries, vehicles, &leftovers);
+    std::cout << "* Couriers: " << couriers << std::endl;
+    std::cout << "* Deliveries not delivered: " << leftovers.size() << std::endl;
+
+
+    if (leftovers.size() == 0) return;
+    int n;
+    while (true) {
+        std::cout << "* Press 0 if you wish to go back to menu" << std::endl << "*" << std::endl;
+        std::cout << "* Press 1 if you wish to repeat adding the deliveries not delivered" << std::endl << "*" << std::endl;
+        std::cout << "* Cenario:";
+        std::cin >> n;
+        std::cout << "*" << std::endl;
+        if (std::cin.eof()) {
+            exit(1);
+        }
+        if (!std::cin.good()) {
+            std::cout << "\n Invalid input!\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            continue;
+        }
+        switch (n) {
+            case 0:
+                return;
+            case 1:
+                Situation2(leftovers);
+                return;
+            default:
+                continue;
+        }
+    }
 }
 
 bool timeCost(Delivery i1, Delivery i2) {
@@ -78,8 +112,8 @@ void Situation3() {
         }
     }
 
-    std::cout << "* Entregas: " << deliveries.size() - leftovers.size() << std::endl << "* Encomendas para devolver: " << leftovers.size() << std::endl;
-    std::cout << "* Tempo medio de entrega: " << (28800- timeLeft)/(deliveries.size() - leftovers.size()) << " segundos" << std::endl;
+    std::cout << "* Deliveries: " << deliveries.size() - leftovers.size() << std::endl << "* Deliveries to return: " << leftovers.size() << std::endl;
+    std::cout << "* Average delivery time: " << (28800- timeLeft)/(deliveries.size() - leftovers.size()) << " seconds" << std::endl;
 }
 void separator() {
     std::cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << std::endl;
@@ -89,6 +123,7 @@ int main() {
     int n;
 
     while (true) {
+        std::vector<Delivery> deliveries;
         separator();
         std::cout << "* PRESS 0 TO QUIT" << std::endl << "*" << std::endl;
         std::cout << "* Cenario:";
@@ -106,10 +141,10 @@ int main() {
         }
         switch (n) {
             case 1:
-                Situation1();
+                Situation1(deliveries);
                 break;
             case 2 :
-                Situation2();
+                Situation2(deliveries);
                 break;
             case 3 :
                 Situation3();
