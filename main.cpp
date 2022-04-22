@@ -23,9 +23,9 @@ void Situation1(std::vector<Delivery> deliveries) {
     if (leftovers.size() == 0) return;
     int n;
     while (true) {
-        std::cout << "* Press 0 if you wish to go back to menu" << std::endl << "*" << std::endl;
-        std::cout << "* Press 1 if you wish to repeat adding the deliveries not delivered" << std::endl << "*" << std::endl;
-        std::cout << "* Cenario:";
+        std::cout << "* Press 0 if you wish to go back to menu" << std::endl;
+        std::cout << "* Press 1 if you wish to repeat adding the deliveries not delivered" << std::endl;
+        std::cout << std::endl;
         std::cin >> n;
         std::cout << "*" << std::endl;
         if (std::cin.eof()) {
@@ -65,9 +65,9 @@ void Situation2(std::vector<Delivery> deliveries) {
     if (leftovers.size() == 0) return;
     int n;
     while (true) {
-        std::cout << "* Press 0 if you wish to go back to menu" << std::endl << "*" << std::endl;
-        std::cout << "* Press 1 if you wish to repeat adding the deliveries not delivered" << std::endl << "*" << std::endl;
-        std::cout << "* Cenario:";
+        std::cout << "* Press 0 if you wish to go back to menu" << std::endl;
+        std::cout << "* Press 1 if you wish to repeat adding the deliveries not delivered" << std::endl;
+        std::cout << std::endl;
         std::cin >> n;
         std::cout << "*" << std::endl;
         if (std::cin.eof()) {
@@ -126,7 +126,7 @@ int main() {
         std::vector<Delivery> deliveries;
         separator();
         std::cout << "* PRESS 0 TO QUIT" << std::endl << "*" << std::endl;
-        std::cout << "* Cenario:";
+        std::cout << "* Situation:";
         std::cin >> n;
         std::cout << "*" << std::endl;
         if (std::cin.eof()) {

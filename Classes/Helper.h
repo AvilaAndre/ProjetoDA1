@@ -27,20 +27,6 @@ public:
      */
     void ReadVehicles(std::vector<Vehicle> *vehicles);
     /**
-     * Sorts the delis and vans vectors giving priority to the volume of the deliveries and the maximum a vehicle takes, and only then the weight.
-     * @param delis a vector with deliveries.
-     * @param vans a vector with the vehicles.
-     * @param leftovers a vector that receives the deliveries that aren't going to be delivered.
-     */
-    int firstFitDecVol(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
-    /**
-     * Sorts the delis and vans vectors giving priority to the weight of the deliveries and the maximum a vehicle takes, and only then the volume.
-     * @param delis a vector with deliveries.
-     * @param vans a vector with the vehicles.
-     * @param leftovers a vector that receives the deliveries that aren't going to be delivered.
-     */
-    int firstFitDecWei(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers);
-    /**
      * It's whole purpose is to sort delis and vans and execute deliveryFirstFit.
      * @param delis a vector with deliveries.
      * @param vans a vector with the vehicles.

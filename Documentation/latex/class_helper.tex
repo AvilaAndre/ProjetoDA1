@@ -7,10 +7,6 @@ void \mbox{\hyperlink{class_helper_ac258bf2cb4753bbcd0a7a92163f43d98}{Read\+Deli
 \item 
 void \mbox{\hyperlink{class_helper_ab9ad1c049dce0b2e28df9d27ad8188f8}{Read\+Vehicles}} (std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ $\ast$vehicles)
 \item 
-int \mbox{\hyperlink{class_helper_ac5a86fe73e22a959a5eb9e8d91daf5e7}{first\+Fit\+Dec\+Vol}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftovers)
-\item 
-int \mbox{\hyperlink{class_helper_a7f78302a99befc17c40884bb81f9bd5a}{first\+Fit\+Dec\+Wei}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftovers)
-\item 
 int \mbox{\hyperlink{class_helper_a0f341d638302e5d0727ec0fb90ed18f4}{sit1\+First\+Fit}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftovers)
 \item 
 int \mbox{\hyperlink{class_helper_abb6a727c7fa39619c8d106feb4aea19e}{delivery\+First\+Fit}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftovers)
@@ -40,36 +36,6 @@ Applies the First Fit Decreasing algorithm (one of the many solutions to the bin
 \begin{DoxyReturn}{Returns}
 Returns the amount of vehicles needed. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_helper_ac5a86fe73e22a959a5eb9e8d91daf5e7}\label{class_helper_ac5a86fe73e22a959a5eb9e8d91daf5e7}} 
-\index{Helper@{Helper}!firstFitDecVol@{firstFitDecVol}}
-\index{firstFitDecVol@{firstFitDecVol}!Helper@{Helper}}
-\doxysubsubsection{\texorpdfstring{firstFitDecVol()}{firstFitDecVol()}}
-{\footnotesize\ttfamily int Helper\+::first\+Fit\+Dec\+Vol (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$}]{delis,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$}]{vans,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$}]{leftovers }\end{DoxyParamCaption})}
-
-Sorts the delis and vans vectors giving priority to the volume of the deliveries and the maximum a vehicle takes, and only then the weight. 
-\begin{DoxyParams}{Parameters}
-{\em delis} & a vector with deliveries. \\
-\hline
-{\em vans} & a vector with the vehicles. \\
-\hline
-{\em leftovers} & a vector that receives the deliveries that aren\textquotesingle{}t going to be delivered. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_helper_a7f78302a99befc17c40884bb81f9bd5a}\label{class_helper_a7f78302a99befc17c40884bb81f9bd5a}} 
-\index{Helper@{Helper}!firstFitDecWei@{firstFitDecWei}}
-\index{firstFitDecWei@{firstFitDecWei}!Helper@{Helper}}
-\doxysubsubsection{\texorpdfstring{firstFitDecWei()}{firstFitDecWei()}}
-{\footnotesize\ttfamily int Helper\+::first\+Fit\+Dec\+Wei (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$}]{delis,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$}]{vans,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$}]{leftovers }\end{DoxyParamCaption})}
-
-Sorts the delis and vans vectors giving priority to the weight of the deliveries and the maximum a vehicle takes, and only then the volume. 
-\begin{DoxyParams}{Parameters}
-{\em delis} & a vector with deliveries. \\
-\hline
-{\em vans} & a vector with the vehicles. \\
-\hline
-{\em leftovers} & a vector that receives the deliveries that aren\textquotesingle{}t going to be delivered. \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{class_helper_a8fcdf36c52b101f961ef2d5c71a74bcd}\label{class_helper_a8fcdf36c52b101f961ef2d5c71a74bcd}} 
 \index{Helper@{Helper}!lucrativeFirstFit@{lucrativeFirstFit}}
 \index{lucrativeFirstFit@{lucrativeFirstFit}!Helper@{Helper}}
