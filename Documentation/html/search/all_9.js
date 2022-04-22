@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tostring_0',['toString',['../class_delivery.html#a09c5176df9736b063f9ce0de4a22fa3a',1,'Delivery::toString()'],['../class_vehicle.html#ab64ae8d96da2f63b0f9445a1e60549c8',1,'Vehicle::toString()']]]
+  ['readdeliveries_0',['ReadDeliveries',['../class_helper.html#ac258bf2cb4753bbcd0a7a92163f43d98',1,'Helper']]],
+  ['readvehicles_1',['ReadVehicles',['../class_helper.html#ab9ad1c049dce0b2e28df9d27ad8188f8',1,'Helper']]]
 ];

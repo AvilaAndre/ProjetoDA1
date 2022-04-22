@@ -11,7 +11,25 @@ int \mbox{\hyperlink{class_helper_ac5a86fe73e22a959a5eb9e8d91daf5e7}{first\+Fit\
 \item 
 int \mbox{\hyperlink{class_helper_a7f78302a99befc17c40884bb81f9bd5a}{first\+Fit\+Dec\+Wei}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftovers)
 \item 
+int \mbox{\hyperlink{class_helper_a0f341d638302e5d0727ec0fb90ed18f4}{sit1\+First\+Fit}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftovers)
+\item 
 int \mbox{\hyperlink{class_helper_abb6a727c7fa39619c8d106feb4aea19e}{delivery\+First\+Fit}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftovers)
+\item 
+\mbox{\Hypertarget{class_helper_aaf8590ff89462b6326910b8388ae8ca2}\label{class_helper_aaf8590ff89462b6326910b8388ae8ca2}} 
+int {\bfseries best\+Fit\+Dec\+Vol} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftovers)
+\item 
+\mbox{\Hypertarget{class_helper_a25f5b77c0def363edff84319428ebd03}\label{class_helper_a25f5b77c0def363edff84319428ebd03}} 
+int {\bfseries best\+Fit\+Dec\+Wei} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftovers)
+\item 
+\mbox{\Hypertarget{class_helper_a712d422763c629ab31fb6924f3b399e7}\label{class_helper_a712d422763c629ab31fb6924f3b399e7}} 
+int {\bfseries delivery\+Best\+Fit} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftovers)
+\item 
+\mbox{\Hypertarget{class_helper_af17d955af87061506f68704c0af10f13}\label{class_helper_af17d955af87061506f68704c0af10f13}} 
+int {\bfseries delivery\+Own\+Best\+Fit} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftover)
+\item 
+int \mbox{\hyperlink{class_helper_ada7d8c3d1c6360fff709c62f65641959}{sit2\+First\+Fit}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftover)
+\item 
+int \mbox{\hyperlink{class_helper_a8fcdf36c52b101f961ef2d5c71a74bcd}{lucrative\+First\+Fit}} (std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ delis, std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ vans, std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$leftover)
 \end{DoxyCompactItemize}
 
 
@@ -32,7 +50,7 @@ Applies the First Fit Decreasing algorithm (one of the many solutions to the bin
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+Returns the amount of vehicles needed. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_helper_ac5a86fe73e22a959a5eb9e8d91daf5e7}\label{class_helper_ac5a86fe73e22a959a5eb9e8d91daf5e7}} 
 \index{Helper@{Helper}!firstFitDecVol@{firstFitDecVol}}
@@ -64,6 +82,24 @@ Sorts the delis and vans vectors giving priority to the weight of the deliveries
 {\em leftovers} & a vector that receives the deliveries that aren\textquotesingle{}t doing to be delivered. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_helper_a8fcdf36c52b101f961ef2d5c71a74bcd}\label{class_helper_a8fcdf36c52b101f961ef2d5c71a74bcd}} 
+\index{Helper@{Helper}!lucrativeFirstFit@{lucrativeFirstFit}}
+\index{lucrativeFirstFit@{lucrativeFirstFit}!Helper@{Helper}}
+\doxysubsubsection{\texorpdfstring{lucrativeFirstFit()}{lucrativeFirstFit()}}
+{\footnotesize\ttfamily int Helper\+::lucrative\+First\+Fit (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$}]{delis,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$}]{vans,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$}]{leftover }\end{DoxyParamCaption})}
+
+Applies the First Fit Decreasing algorithm (one of the many solutions to the bin packing problem) adapted to this particular situation. It starts by looping through every cargo, first it adds cargo to the first vehicle, then it fills that vehicle with the next cargo, when the cargo being looped doesn\textquotesingle{}t fit the vehicle(s) being filled it gets a new vehicle to fill, however, if there are no more vehicles the cargo is added to a vector with every delivery that is not going to be delivered. 
+\begin{DoxyParams}{Parameters}
+{\em delis} & a vector with deliveries. \\
+\hline
+{\em vans} & a vector with the vehicles. \\
+\hline
+{\em leftovers} & a vector that receives the deliveries that aren\textquotesingle{}t doing to be delivered. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the amount of vehicles needed. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_helper_ac258bf2cb4753bbcd0a7a92163f43d98}\label{class_helper_ac258bf2cb4753bbcd0a7a92163f43d98}} 
 \index{Helper@{Helper}!ReadDeliveries@{ReadDeliveries}}
 \index{ReadDeliveries@{ReadDeliveries}!Helper@{Helper}}
@@ -86,6 +122,42 @@ Reads the values from the file carrinhas.\+txt creating objects that will be sto
 {\em vehicles} & vector. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_helper_a0f341d638302e5d0727ec0fb90ed18f4}\label{class_helper_a0f341d638302e5d0727ec0fb90ed18f4}} 
+\index{Helper@{Helper}!sit1FirstFit@{sit1FirstFit}}
+\index{sit1FirstFit@{sit1FirstFit}!Helper@{Helper}}
+\doxysubsubsection{\texorpdfstring{sit1FirstFit()}{sit1FirstFit()}}
+{\footnotesize\ttfamily int Helper\+::sit1\+First\+Fit (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$}]{delis,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$}]{vans,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$}]{leftovers }\end{DoxyParamCaption})}
+
+It\textquotesingle{}s whole purpose is to sort delis and vans and execute delivery\+First\+Fit. 
+\begin{DoxyParams}{Parameters}
+{\em delis} & a vector with deliveries. \\
+\hline
+{\em vans} & a vector with the vehicles. \\
+\hline
+{\em leftovers} & a vector that receives the deliveries that aren\textquotesingle{}t doing to be delivered. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the amount of vehicles needed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_helper_ada7d8c3d1c6360fff709c62f65641959}\label{class_helper_ada7d8c3d1c6360fff709c62f65641959}} 
+\index{Helper@{Helper}!sit2FirstFit@{sit2FirstFit}}
+\index{sit2FirstFit@{sit2FirstFit}!Helper@{Helper}}
+\doxysubsubsection{\texorpdfstring{sit2FirstFit()}{sit2FirstFit()}}
+{\footnotesize\ttfamily int Helper\+::sit2\+First\+Fit (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$}]{delis,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$}]{vans,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_delivery}{Delivery}} $>$ $\ast$}]{leftover }\end{DoxyParamCaption})}
+
+It\textquotesingle{}s whole purpose is to sort delis and vans and execute lucrative\+First\+Fit. 
+\begin{DoxyParams}{Parameters}
+{\em delis} & a vector with deliveries. \\
+\hline
+{\em vans} & a vector with the vehicles. \\
+\hline
+{\em leftovers} & a vector that receives the deliveries that aren\textquotesingle{}t doing to be delivered. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the amount of vehicles needed. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

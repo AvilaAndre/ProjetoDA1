@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vehicle_0',['Vehicle',['../class_vehicle.html',1,'Vehicle'],['../class_vehicle.html#a915bf08499a025484613c816fd5dbf0a',1,'Vehicle::Vehicle(int vol, int peso, int cos)']]],
-  ['volume_1',['volume',['../class_vehicle.html#a6fa7ee2680838571f02e403f9ff2f08f',1,'Vehicle']]]
+  ['sit1firstfit_0',['sit1FirstFit',['../class_helper.html#a0f341d638302e5d0727ec0fb90ed18f4',1,'Helper']]],
+  ['sit2firstfit_1',['sit2FirstFit',['../class_helper.html#ada7d8c3d1c6360fff709c62f65641959',1,'Helper']]]
 ];
