@@ -60,6 +60,9 @@ public:
      * @return Returns the amount of vehicles needed.
      */
     int lucrativeFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftover);
+
+    void sortVehicles(std::vector<Vehicle> vehicles);
+    void sortDeliveries(std::vector<Delivery> delis);
 };
 
 

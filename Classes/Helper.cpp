@@ -228,3 +228,48 @@ int Helper::lucrativeFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> 
     std::cout << money << std::endl;
     return res;
 }
+
+void Helper::sortVehicles(std::vector<Vehicle> vehicles) {
+    for (int i = 0; i < vehicles.size() - 1; i++) {
+        double ratio1 = vehicles[i].getWeight() * vehicles[i].getVolume() / vehicles[i].getCost();
+        for (int j = 1; j < vehicles.size(); j++) {
+            double ratio2 = vehicles[j].getWeight() * vehicles[j].getVolume() / vehicles[j].getCost();
+            if (ratio1 < ratio2) {
+                Vehicle temp = vehicles[j];
+                vehicles[j] = vehicles[i];
+                vehicles[i] = temp;
+            }
+        }
+    }
+}
+
+//sort pelos veiculos mais baratos
+void Helper::sortVehicles(std::vector<Vehicle> vehicles) {
+    for (int i = 0; i < vehicles.size() - 1; i++) {
+        double ratio1 = vehicles[i].getWeight() * vehicles[i].getVolume() / vehicles[i].getCost();
+        for (int j = 1; j < vehicles.size(); j++) {
+            double ratio2 = vehicles[j].getWeight() * vehicles[j].getVolume() / vehicles[j].getCost();
+            if (ratio1 < ratio2) {
+                Vehicle temp = vehicles[j];
+                vehicles[j] = vehicles[i];
+                vehicles[i] = temp;
+            }
+        }
+    }
+}
+
+//sort pelas encomendas que dao mais recompensa
+void Helper::sortDeliveries(std::vector<Delivery> delis) {
+    for (int i = 0; i < delis.size() - 1; i++) {
+        double ratio1 = delis[i].getWeight() * delis[i].getVolume() / delis[i].getReward();
+        for (int j = 1; j < delis.size(); j++) {
+            double ratio2 = delis[j].getWeight() * delis[j].getVolume() / delis[j].getReward();
+            if (ratio1 > ratio2) {
+                Delivery temp = delis[j];
+                delis[j] = delis[i];
+                delis[i] = temp;
+            }
+        }
+    }
+
+}
