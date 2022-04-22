@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lucrativefirstfit_0',['lucrativeFirstFit',['../class_helper.html#a8fcdf36c52b101f961ef2d5c71a74bcd',1,'Helper']]]
+  ['increasepriority_0',['increasePriority',['../class_delivery.html#a6f12cdb474c29900f454ffab86e2081f',1,'Delivery']]]
 ];

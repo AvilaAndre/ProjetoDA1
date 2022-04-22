@@ -21,6 +21,11 @@ void Situation1(std::vector<Delivery> deliveries) {
     std::cout << "* Deliveries not delivered: " << leftovers.size() << std::endl;
 
     if (leftovers.size() == 0) return;
+
+    for (auto u = leftovers.begin(); u != leftovers.end(); u++) {
+        u->increasePriority();
+    }
+
     int n;
     while (true) {
         std::cout << "*" << std::endl << "* Press 0 if you wish to go back to menu" << std::endl;
@@ -63,6 +68,11 @@ void Situation2(std::vector<Delivery> deliveries) {
 
 
     if (leftovers.size() == 0) return;
+
+    for (auto u = leftovers.begin(); u != leftovers.end(); u++) {
+        u->increasePriority();
+    }
+
     int n;
     while (true) {
         std::cout << "*" << std::endl << "* Press 0 if you wish to go back to menu" << std::endl;
@@ -92,6 +102,8 @@ void Situation2(std::vector<Delivery> deliveries) {
 }
 
 bool timeCost(Delivery i1, Delivery i2) {
+    if (i1.getPriority() != i2.getPriority())
+        return i1.getPriority() > i2.getPriority();
     return (i1.getDuration() < i2.getDuration());
 }
 
@@ -115,6 +127,11 @@ void Situation3(std::vector<Delivery> deliveries) {
     std::cout << "* Average delivery time: " << (28800 - timeLeft)/(deliveries.size() - leftovers.size()) << " seconds" << std::endl;
 
     if (leftovers.size() == 0) return;
+
+    for (auto u = leftovers.begin(); u != leftovers.end(); u++) {
+        u->increasePriority();
+    }
+
     int n;
     while (true) {
         std::cout << "*" << std::endl << "* Press 0 if you wish to go back to menu" << std::endl;

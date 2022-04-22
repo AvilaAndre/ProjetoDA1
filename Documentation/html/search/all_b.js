@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['vehicle_0',['Vehicle',['../class_vehicle.html',1,'Vehicle'],['../class_vehicle.html#a915bf08499a025484613c816fd5dbf0a',1,'Vehicle::Vehicle(int vol, int peso, int cos)']]],
-  ['volume_1',['volume',['../class_vehicle.html#a6fa7ee2680838571f02e403f9ff2f08f',1,'Vehicle']]]
+  ['tostring_0',['toString',['../class_delivery.html#a09c5176df9736b063f9ce0de4a22fa3a',1,'Delivery::toString()'],['../class_vehicle.html#ab64ae8d96da2f63b0f9445a1e60549c8',1,'Vehicle::toString()']]]
 ];

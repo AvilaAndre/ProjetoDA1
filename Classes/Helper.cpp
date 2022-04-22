@@ -72,6 +72,8 @@ void Helper::ReadVehicles(std::vector<Vehicle> *vehicles) {
 
 bool compareDeliveriesVolWei(Delivery i1, Delivery i2)
 {
+    if (i1.getPriority() != i2.getPriority())
+        return i1.getPriority() > i2.getPriority();
     if (i1.getVolume() > i2.getVolume())
         return true;
     else if (i1.getVolume() == i2.getVolume()) {
@@ -94,6 +96,8 @@ bool compareVansVolWei(Vehicle i1, Vehicle i2)
 
 bool compareDeliveriesWeiVol(Delivery i1, Delivery i2)
 {
+    if (i1.getPriority() != i2.getPriority())
+        return i1.getPriority() > i2.getPriority();
     if (i1.getWeight() > i2.getWeight())
         return true;
     else if (i1.getWeight() == i2.getWeight()) {
@@ -115,6 +119,8 @@ bool compareVansWeiVol(Vehicle i1, Vehicle i2)
 }
 
 bool compareDeliveries(Delivery i1, Delivery i2) {
+    if (i1.getPriority() != i2.getPriority())
+        return i1.getPriority() > i2.getPriority();
     return (i1.getVolume() * i1.getWeight() > i2.getVolume() * i2.getWeight());
 }
 
@@ -133,7 +139,7 @@ int Helper::sit1FirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans,
 }
 
 
-int Helper::deliveryFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftover) {
+int Helper::deliveryFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers) {
     int res = 0;
 
     for (int i = 0; i < delis.size(); i++) {
@@ -151,7 +157,7 @@ int Helper::deliveryFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> v
             res++;
         }
         else if (j == res)
-            leftover->push_back(delis[i]);
+            leftovers->push_back(delis[i]);
     }
 
     return res;
@@ -164,6 +170,8 @@ bool compareVehicleCostRatio(Vehicle i1, Vehicle i2) {
 }
 
 bool compareDeliveryReturnRatio(Delivery i1, Delivery i2) {
+    if (i1.getPriority() != i2.getPriority())
+        return i1.getPriority() > i2.getPriority();
     return ((double)i1.getReward()/((double)i1.getVolume()+(double)i1.getWeight()) > (double)i2.getReward()/((double)i2.getVolume()+(double)i2.getWeight()));
 }
 
@@ -174,6 +182,8 @@ bool compareVehicleCost(Vehicle i1, Vehicle i2) {
 }
 
 bool compareDeliveryReturn(Delivery i1, Delivery i2) {
+    if (i1.getPriority() != i2.getPriority())
+        return i1.getPriority() > i2.getPriority();
     return i1.getReward() > i2.getReward();
 }
 
@@ -189,7 +199,7 @@ int Helper::sit2FirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans,
     return lucrativeFirstFit(delis, vans, leftovers);
 }
 
-int Helper::lucrativeFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftover) {
+int Helper::lucrativeFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> vans, std::vector<Delivery> *leftovers) {
     int res = 0;
     int money = 0;
 
@@ -211,7 +221,7 @@ int Helper::lucrativeFirstFit(std::vector<Delivery> delis, std::vector<Vehicle> 
             res++;
         }
         else if (j == res)
-            leftover->push_back(delis[i]);
+            leftovers->push_back(delis[i]);
     }
     int cost = 0;
     std::cout << "* Total reward for deliveries: ";

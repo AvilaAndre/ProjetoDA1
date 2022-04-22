@@ -19,6 +19,7 @@ private:
     int volume;
     int reward;
     int duration;
+    int priority;
 public:
     /**
      * The constructor of the delivery class.
@@ -49,6 +50,14 @@ public:
      * @return Returns the duration value.
      */
     int getDuration();
+    /**
+     * @return Returns the priority value.
+     */
+    int getPriority();
+    /**
+     * Increases the priority value by one.
+     */
+    void increasePriority();
 };
 
 

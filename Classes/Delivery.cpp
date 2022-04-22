@@ -15,6 +15,7 @@ Delivery::Delivery(bool express, int wei, int vol, int rew, int dur) {
     this->volume = vol;
     this->reward = rew;
     this->duration = dur;
+    this->priority = 0;
 }
 
 std::string Delivery::toString() {
@@ -37,4 +38,12 @@ int Delivery::getReward() {
 
 int Delivery::getDuration() {
     return this->duration;
+}
+
+int Delivery::getPriority() {
+    return this->priority;
+}
+
+void Delivery::increasePriority() {
+    this->priority++;
 }
