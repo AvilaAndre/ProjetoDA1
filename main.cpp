@@ -23,7 +23,7 @@ void Situation1(std::vector<Delivery> deliveries) {
     if (leftovers.size() == 0) return;
     int n;
     while (true) {
-        std::cout << "* Press 0 if you wish to go back to menu" << std::endl;
+        std::cout << "*" << std::endl << "* Press 0 if you wish to go back to menu" << std::endl;
         std::cout << "* Press 1 if you wish to repeat adding the deliveries not delivered" << std::endl;
         std::cout << std::endl;
         std::cin >> n;
@@ -65,7 +65,7 @@ void Situation2(std::vector<Delivery> deliveries) {
     if (leftovers.size() == 0) return;
     int n;
     while (true) {
-        std::cout << "* Press 0 if you wish to go back to menu" << std::endl;
+        std::cout << "*" << std::endl << "* Press 0 if you wish to go back to menu" << std::endl;
         std::cout << "* Press 1 if you wish to repeat adding the deliveries not delivered" << std::endl;
         std::cout << std::endl;
         std::cin >> n;
@@ -95,9 +95,8 @@ bool timeCost(Delivery i1, Delivery i2) {
     return (i1.getDuration() < i2.getDuration());
 }
 
-void Situation3() {
+void Situation3(std::vector<Delivery> deliveries) {
     Helper sitHelper;
-    std::vector<Delivery> deliveries;
     sitHelper.ReadDeliveries(&deliveries);
     std::sort(deliveries.begin(), deliveries.end(), timeCost);
 
@@ -114,7 +113,36 @@ void Situation3() {
 
     std::cout << "* Deliveries: " << deliveries.size() - leftovers.size() << std::endl << "* Deliveries to return: " << leftovers.size() << std::endl;
     std::cout << "* Average delivery time: " << (28800 - timeLeft)/(deliveries.size() - leftovers.size()) << " seconds" << std::endl;
+
+    if (leftovers.size() == 0) return;
+    int n;
+    while (true) {
+        std::cout << "*" << std::endl << "* Press 0 if you wish to go back to menu" << std::endl;
+        std::cout << "* Press 1 if you wish to repeat adding the deliveries not delivered" << std::endl;
+        std::cout << std::endl;
+        std::cin >> n;
+        std::cout << "*" << std::endl;
+        if (std::cin.eof()) {
+            exit(1);
+        }
+        if (!std::cin.good()) {
+            std::cout << "\n Invalid input!\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            continue;
+        }
+        switch (n) {
+            case 0:
+                return;
+            case 1:
+                Situation3(leftovers);
+                return;
+            default:
+                continue;
+        }
+    }
 }
+
 void separator() {
     std::cout << "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *" << std::endl;
 }
@@ -147,7 +175,7 @@ int main() {
                 Situation2(deliveries);
                 break;
             case 3 :
-                Situation3();
+                Situation3(deliveries);
                 break;
             case 0 :
                 separator();
